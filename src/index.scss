@@ -1,9 +1,16 @@
+$main-color: #008aa1;
+$off-white: #ddf2f3;
+$dark: darken(#fff, 30%);
+$invert: invert(black);
+
 :root {
   font: 16px / 1 sans-serif;
 }
-h2 {
+
+h1 {
   display: flex;
   justify-content: center;
+  color: $invert;
 }
 
 html {
@@ -17,14 +24,14 @@ img {
 body {
   margin: 0;
   min-height: 100%;
-  background-color: #008aa1;
+  background-color: $main-color;
   justify-content: center;
   align-items: center;
 }
 
 nav {
   a {
-    display: flex;
+    $flex: flex;
     flex-direction: row;
     justify-content: center;
     text-decoration: none;
@@ -32,11 +39,11 @@ nav {
 }
 
 .white {
-  color: white;
+  color: $dark;
 }
 
 .container {
-  background-color: #008aa1;
+  background-color: $main-color;
   margin-right: 10%;
   margin-left: 10%;
 }
@@ -44,8 +51,8 @@ nav {
 .header {
   display: flex;
   flex-direction: column-reverse;
-  background-color: #ddf2f3;
-  padding: 0.5rem;
+  background-color: $off-white;
+  padding: round(0.6rem);
   margin: 0px;
   justify-content: center;
   align-items: center;
@@ -58,12 +65,13 @@ nav {
   padding: 0.2rem;
 }
 
-.navbar-top a {
-  color: white;
+.navbar-top {
+  a {
+    color: $dark;
+  }
 }
-
 .blue-background {
-  background-color: #ddf2f3;
+  background-color: $off-white;
   margin: 0px;
 }
 
@@ -74,10 +82,14 @@ nav {
   padding: 1%;
   justify-content: flex-start;
   width: 20%;
-  height: 23rem;
+  height: round(23.3rem);
 }
+
 .kitteh-list {
-  margin-top: 0px;
+  li {
+    margin: 0;
+    color: darken(#fff, 30%);
+  }
 }
 
 .right-content {
@@ -86,7 +98,7 @@ nav {
   justify-content: flex-end;
   width: 70%;
   float: right;
-  padding: 1rem;
+  padding: 10;
 }
 
 .footer {
@@ -99,7 +111,7 @@ nav {
   margin-right: 25%;
   align-content: center;
   justify-content: space-evenly;
-  color: black;
+  color: $invert;
   text-decoration: none;
   padding: 1rem;
 }
